@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  background-color: lightblue;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+}
+/* Круг загрузки */
+.loader {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-top: 10px solid tomato;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+  border-radius: 50%;
+  animation: loader 0.75s linear infinite;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ==================== */
+.loader-wrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  border: transparent;
+}
+.dot__bounce-top {
+  animation: bounce-top 0.45s linear infinite alternate;
+}
+
+@keyframes bounce-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.dot__bounce-reverse {
+  animation: bounce-reverse 0.45s linear infinite alternate-reverse;
+}
+@keyframes bounce-reverse {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
